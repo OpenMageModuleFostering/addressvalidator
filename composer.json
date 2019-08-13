@@ -1,12 +1,12 @@
 {
     "name": "OpenMageModuleFostering/Addressvalidator",
     "type": "magento-module",
-    "license": "OSL-v3.0",
+    "license": "Open-Software-License",
     "homepage": "",
-    "description": "Validate billing and shipping addresses in the One Page Checkout.",
+    "description": "Validate billing and shipping addresses in the One Page Checkout. Customer submits billing and shipping addresses and is shown a popup of valid addresses to choose from. With support for UPS, USPS, Fedex, Address Doctor and Melissa Data.",
     "authors": [
     {
-        "name": "ExtensionsStore",
+        "name": "Extensions Store",
         "email": "admin@extensions-store.com"
     }
 ],
