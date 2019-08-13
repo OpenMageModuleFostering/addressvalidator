@@ -238,7 +238,6 @@ class Aydus_Addressvalidator_Helper_Data extends Mage_Core_Helper_Abstract {
                                 
                 $customerAddress = Mage::getModel('customer/address')->load($customerAddressId);
                 $customerAddress->addData($data);
-                $customerAddress->setPopulated(1);
                 $customerAddress->save();   
                 
                 if ($customerAddress->getId()){
@@ -263,6 +262,7 @@ class Aydus_Addressvalidator_Helper_Data extends Mage_Core_Helper_Abstract {
                                 
                 if (@$postData['use_for_shipping']){
                     
+                    unset($data['address_id']);
                     $quote = Mage::getSingleton('checkout/session')->getQuote();
                     $shippingAddress = $quote->getShippingAddress();
                     
@@ -276,7 +276,6 @@ class Aydus_Addressvalidator_Helper_Data extends Mage_Core_Helper_Abstract {
                     
                         $customerShippingAddress = Mage::getModel('customer/address')->load($customerAddressId);
                         $customerShippingAddress->addData($data);
-                        $customerShippingAddress->setPopulated(1);
                         $customerShippingAddress->save();
                         
                         if ($customerShippingAddress->getId()){
